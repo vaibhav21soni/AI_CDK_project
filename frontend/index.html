@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal blog for sharing thoughts and ideas - AI Generated with Amazon Q Developer">
+    <meta name="generator" content="Amazon Q Developer AI">
+    <title>Personal Blog - Share Your Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AI Disclaimer -->
+    <meta name="ai-disclaimer" content="This website was generated and enhanced using AI assistance (Amazon Q Developer). Please review all functionality before production use.">
+</head>
+<body>
+    <div id="app">
+        <!-- Enhanced Header with Animation -->
+        <header class="hero-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-feather-alt logo-icon"></i>
+                    <h1 class="animated-title">My Personal Blog</h1>
+                    <p class="subtitle">Where thoughts become stories</p>
+                    <small class="ai-attribution">✨ Enhanced with AI assistance</small>
+                </div>
+                
+                <nav class="header-nav" aria-label="Main navigation">
+                    <button id="toggle-create" class="nav-button primary" aria-expanded="false">
+                        <i class="fas fa-plus"></i>
+                        <span>Create Post</span>
+                    </button>
+                    <button id="refresh-posts" class="nav-button secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Refresh Posts</span>
+                    </button>
+                    <button id="toggle-theme" class="nav-button secondary" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </nav>
+            </div>
+            
+            <!-- Floating particles animation -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <!-- Enhanced Create Post Section -->
+            <section id="create-post" class="card create-section hidden" aria-hidden="true">
+                <div class="card-header">
+                    <h2><i class="fas fa-edit"></i> Create New Post</h2>
+                    <button class="close-btn" id="close-create" aria-label="Close create post form">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form id="post-form" class="enhanced-form" novalidate>
+                    <div class="form-group">
+                        <label for="title" class="form-label">
+                            <i class="fas fa-heading"></i>
+                            Post Title *
+                        </label>
+                        <input type="text" id="title" name="title" 
+                               placeholder="Enter an engaging title..." 
+                               required maxlength="200" 
+                               aria-describedby="title-error title-counter">
+                        <div class="input-footer">
+                            <div id="title-error" class="error-message" role="alert" aria-live="polite"></div>
+                            <div id="title-counter" class="char-counter">0/200</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content" class="form-label">
+                            <i class="fas fa-align-left"></i>
+                            Post Content *
+                        </label>
+                        <textarea id="content" name="content" 
+                                placeholder="Share your thoughts, experiences, or ideas..." 
+                                required maxlength="10000" rows="8" 
+                                aria-describedby="content-error content-counter"></textarea>
+                        <div class="input-footer">
+                            <div id="content-error" class="error-message" role="alert" aria-live="polite"></div>
+                            <div id="content-counter" class="char-counter">0/10000</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status" class="form-label">
+                                <i class="fas fa-eye"></i>
+                                Status
+                            </label>
+                            <select id="status" name="status" class="custom-select">
+                                <option value="draft">📝 Draft</option>
+                                <option value="published">🌟 Published</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tags" class="form-label">
+                                <i class="fas fa-tags"></i>
+                                Tags (optional)
+                            </label>
+                            <input type="text" id="tags" name="tags" 
+                                   placeholder="tech, lifestyle, thoughts..." 
+                                   aria-describedby="tags-help">
+                            <small id="tags-help" class="form-help">Separate tags with commas</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="save-draft">
+                            <i class="fas fa-save"></i>
+                            Save Draft
+                        </button>
+                        <button type="submit" class="btn btn-primary submit-button">
+                            <span class="button-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span class="button-text">Publish Post</span>
+                            </span>
+                            <span class="loading-spinner hidden" aria-hidden="true">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Enhanced Posts Section -->
+            <section id="posts" class="card posts-section" aria-live="polite">
+                <div class="card-header">
+                    <h2><i class="fas fa-newspaper"></i> Published Posts</h2>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-posts" placeholder="Search posts..." 
+                                   aria-label="Search posts">
+                        </div>
+                        <select id="sort-posts" class="sort-select" aria-label="Sort posts">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="title">By Title</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="posts-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span id="total-posts">0</span>
+                        <span>Posts</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-eye"></i>
+                        <span id="total-views">0</span>
+                        <span>Views</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar"></i>
+                        <span id="last-updated">Never</span>
+                        <span>Last Updated</span>
+                    </div>
+                </div>
+                
+                <div id="loading" class="loading-container">
+                    <div class="loading-spinner-large">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <p>Loading your amazing posts...</p>
+                </div>
+                
+                <div id="posts-container" class="posts-grid" role="feed" aria-label="Blog posts">
+                    <!-- Posts will be loaded here -->
+                </div>
+                
+                <div id="no-posts" class="empty-state hidden">
+                    <div class="empty-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>No posts yet!</h3>
+                    <p>Start sharing your thoughts with the world.</p>
+                    <button class="btn btn-primary" id="create-first-post">
+                        <i class="fas fa-plus"></i>
+                        Create Your First Post
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container" aria-live="polite"></div>
+        
+        <!-- Floating Action Button -->
+        <button id="fab" class="fab" title="Quick Create Post" aria-label="Quick create post">
+            <i class="fas fa-plus"></i>
+        </button>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top hidden" title="Back to top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <!-- AI Attribution Footer -->
+        <footer class="ai-footer">
+            <p>
+                <i class="fas fa-robot"></i>
+                This blog was enhanced with AI assistance (Amazon Q Developer). 
+                <a href="#" onclick="alert('This project was generated and enhanced using AI assistance. Please review all functionality before production use.')">
+                    Learn more
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

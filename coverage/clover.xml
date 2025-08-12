@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1754982978746" clover="3.2.0">
+  <project timestamp="1754982978749" name="All files">
+    <metrics statements="99" coveredstatements="63" conditionals="35" coveredconditionals="1" methods="8" coveredmethods="4" elements="142" coveredelements="68" complexity="0" loc="99" ncloc="99" packages="2" files="6" classes="6"/>
+    <package name="lambda">
+      <metrics statements="47" coveredstatements="11" conditionals="33" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="create-post.ts" path="/home/vaibhav/CDK_project/lambda/create-post.ts">
+        <metrics statements="36" coveredstatements="6" conditionals="27" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="119" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+      </file>
+      <file name="get-posts.ts" path="/home/vaibhav/CDK_project/lambda/get-posts.ts">
+        <metrics statements="11" coveredstatements="5" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="lib">
+      <metrics statements="52" coveredstatements="52" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <file name="api-stack.ts" path="/home/vaibhav/CDK_project/lib/api-stack.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="59" count="7" type="stmt"/>
+        <line num="75" count="7" type="stmt"/>
+        <line num="104" count="7" type="stmt"/>
+        <line num="107" count="7" type="stmt"/>
+        <line num="129" count="7" type="stmt"/>
+        <line num="182" count="7" type="stmt"/>
+        <line num="187" count="7" type="stmt"/>
+      </file>
+      <file name="database-stack.ts" path="/home/vaibhav/CDK_project/lib/database-stack.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+      </file>
+      <file name="frontend-stack.ts" path="/home/vaibhav/CDK_project/lib/frontend-stack.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+        <line num="66" count="7" type="stmt"/>
+        <line num="78" count="7" type="stmt"/>
+        <line num="83" count="7" type="stmt"/>
+        <line num="88" count="7" type="stmt"/>
+      </file>
+      <file name="personal-blog-stack.ts" path="/home/vaibhav/CDK_project/lib/personal-blog-stack.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
